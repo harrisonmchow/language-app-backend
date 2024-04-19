@@ -4,6 +4,15 @@
 
 `git clone <url>`
 
+## Switch to the branch for the current sprint
+To create a new branch:
+`git checkout -b sprint<x>`
+
+or 
+
+To switch to an existing branch:
+`git checkout sprint<x>`
+
 ## Download Node.js
 Follow download instructions: https://nodejs.org/en/download
 
@@ -16,7 +25,7 @@ STARTING_INDEX=0
 
 Edit the following variables to change how frequently the word changes, and what word it starts on.
 
-## Set up .env file
+## Set up node modules
 Install node modules by running
 `npm install`
 
