@@ -6,12 +6,12 @@
 
 ## Switch to the branch for the current sprint
 To create a new branch:
-`git checkout -b sprint<x>`
+`git checkout -b sprint_<x>`
 
 or 
 
 To switch to an existing branch:
-`git checkout sprint<x>`
+`git checkout sprint_<x>`
 
 ## Download Node.js
 Follow download instructions: https://nodejs.org/en/download
