@@ -85,12 +85,12 @@ app.get('/', (req, res) => {
 });
 
 /* Return the word */
-app.get('/dailyword', (req, res) => {
+app.get('/daily_word', (req, res) => {
     res.send({word: selectedWord});
 });
 
 /* All translations of daily word */
-app.get('/alltranslations', (req, res) => {
+app.get('/all_translations', (req, res) => {
     res.send({translations: translations});
 });
 
