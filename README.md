@@ -25,6 +25,7 @@ GOOGLE_API_KEY=
 PORT=5555
 ```
 Edit the following variables to change how frequently the word changes, and what word it starts on.
+For production, since we want to rotate every 24 hours, let `INTERVAL_MINUTES=11440`
 Our api-key for google can be found here: https://console.cloud.google.com/apis/api/translate.googleapis.com/credentials?hl=en&project=resonant-petal-420807
 
 ## Set up node modules
@@ -33,6 +34,10 @@ Install node modules by running
 
 ## Start backend
 `npm start`
+
+# Testing the backend
+For testing, we do not want to overload the API since we have a quota for Google API calls. Hence, we should only test a small amount of translations when testing, e.g. 3
+To do this, uncomment the code in the `translate` function to break after 3 api calls.
 
 ## Now you can start sending requests to it via the frontend or Postman.
 Check out this page for the available routes: https://www.notion.so/Backend-Routes-dca508dd939a480ca574559cfc62043c?pvs=4
