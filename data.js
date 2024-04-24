@@ -1,5 +1,5 @@
 const words = [
-    'Life', 'Number', 'Basic', 'Love', 'People',
+    'Congratulations', 'Life', 'Number', 'Basic', 'Love', 'People',
     'Common', 'Part', 'Woman', 'Moderate', 'Routine',
     'Time', 'Year', 'Thing', 'Familiar', 'Day',
     'Work', 'Good', 'Traditional', 'Need', 'Ordinary',
@@ -118,10 +118,10 @@ const supportedLanguages = [
         "language": "nl",
         "name": "Dutch"
     },
-    {
-        "language": "en",
-        "name": "English"
-    },
+    // {
+    //     "language": "en",
+    //     "name": "English"
+    // },
     {
         "language": "eo",
         "name": "Esperanto"
@@ -556,7 +556,49 @@ const supportedLanguages = [
     }
 ];
 
+const wordsWithHints = [
+    { word: 'Congratulations', hints: ['Often used to express joy or good wishes for someone\'s success.', 'Given to someone who has achieved something remarkable.'] },
+    { word: 'Life', hints: ['The existence of an individual human being or animal.', 'The period between birth and death.'] },
+    { word: 'Number', hints: ['Commonly associated with mathematics.', 'Used to quantify or count something.'] },
+    { word: 'Basic', hints: ['Fundamental or essential.', 'Simple and uncomplicated.'] },
+    { word: 'Love', hints: ['An intense feeling of deep affection.', 'Often depicted as a heart symbol.'] },
+    { word: 'People', hints: ['Human beings in general or considered collectively.', 'Social creatures that live in communities.'] },
+    { word: 'Common', hints: ['Frequently occurring or found.', 'Shared by many or all.'] },
+    { word: 'Part', hints: ['A piece or segment of something.', 'Contributes to a whole.'] },
+    { word: 'Woman', hints: ['An adult human female.', 'Often depicted with long hair and feminine features.'] },
+    { word: 'Moderate', hints: ['Kept within reasonable limits.', 'Not excessive or extreme.'] },
+    { word: 'Routine', hints: ['A sequence of actions regularly followed.', 'Daily tasks or activities.'] },
+    { word: 'Time', hints: ['The indefinite continued progress of existence.', 'Measured in seconds, minutes, hours, etc.'] },
+    { word: 'Year', hints: ['A period of 365 days.', 'Divided into twelve months.'] },
+    { word: 'Thing', hints: ['An object, fact, or event.', 'Used to refer to something unspecified or unknown.'] },
+    { word: 'Familiar', hints: ['Well-known from long or close association.', 'Seeming well-acquainted.'] },
+    { word: 'Day', hints: ['The period of light between sunrise and sunset.', 'Consists of twenty-four hours.'] },
+    { word: 'Work', hints: ['Activity involving mental or physical effort.', 'Done to achieve a purpose or result.'] },
+    { word: 'Good', hints: ['Morally excellent.', 'Beneficial or advantageous.'] },
+    { word: 'Traditional', hints: ['Based on customs or beliefs.', 'Passed down from generation to generation.'] },
+    { word: 'Need', hints: ['Require something because it is essential.', 'A lack of something necessary or desirable.'] },
+    { word: 'Ordinary', hints: ['With no special or distinctive features.', 'Commonplace or usual.'] },
+    { word: 'Friend', hints: ['A person with whom one has a bond of mutual affection.', 'Someone you can rely on and trust.'] },
+    { word: 'Straightforward', hints: ['Direct and uncomplicated.', 'Easy to understand or follow.'] },
+    { word: 'Simple', hints: ['Easily understood or done.', 'Not elaborate or complicated.'] },
+    { word: 'Child', hints: ['A young human being below the age of puberty.', 'Dependent on adults for care and guidance.'] },
+    { word: 'Man', hints: ['An adult human male.', 'Often depicted with masculine features.'] },
+    { word: 'World', hints: ['The earth, together with all of its countries and peoples.', 'The universe or all that exists.'] },
+    { word: 'Commonplace', hints: ['Not unusual or remarkable.', 'Frequently encountered or seen.'] },
+    { word: 'Place', hints: ['A particular position or location.', 'A space or area that is occupied.'] },
+    { word: 'Elementary', hints: ['Relating to the basic principles or fundamental parts.', 'Simple or straightforward.'] },
+    { word: 'Way', hints: ['A method, style, or manner of doing something.', 'A route or direction.'] },
+    { word: 'Conventional', hints: ['Based on or in accordance with what is generally done.', 'Following traditional or common practices.'] },
+    { word: 'Standard', hints: ['An accepted or approved model.', 'Established as a measure or rule for quality.'] },
+    { word: 'Typical', hints: ['Having the distinctive qualities of a particular type of person or thing.', 'Representative of a pattern or standard.'] },
+    { word: 'Usual', hints: ['Customary or habitual.', 'As expected or normal.'] },
+    { word: 'Routine', hints: ['A sequence of actions regularly followed.', 'Daily tasks or activities.'] },
+    { word: 'Average', hints: ['The result obtained by adding several quantities together and then dividing this total by the number of quantities.', 'Not outstanding or exceptional.'] },
+    { word: 'Plain', hints: ['Not decorated or elaborate.', 'Simple and unpretentious.'] }
+];
+
 module.exports = {
     words,
-    supportedLanguages
+    supportedLanguages,
+    wordsWithHints
 };
