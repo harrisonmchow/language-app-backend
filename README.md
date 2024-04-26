@@ -25,7 +25,7 @@ GOOGLE_API_KEY=
 PORT=5555
 ```
 Edit the following variables to change how frequently the word changes, and what word it starts on.
-For production, since we want to rotate every 24 hours, let `INTERVAL_MINUTES=11440`
+For production, since we want to rotate every 24 hours, let `INTERVAL_MINUTES=1440`
 Our api-key for google can be found here: https://console.cloud.google.com/apis/api/translate.googleapis.com/credentials?hl=en&project=resonant-petal-420807
 
 ## Set up node modules
