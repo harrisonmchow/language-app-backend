@@ -66,9 +66,9 @@ async function translate(word) {
     const url = "https://translation.googleapis.com/language/translate/v2";
 
     /* For testing, test only the first 3 to limit API calls */
-    let i = 0;
+    // let i = 0;
     for (const language of supportedLanguages) {
-        if (i >= 3) break;
+        // if (i >= 3) break;
         /* Make an API request to translate for each language */
         try {
             const response = await axios.post(
@@ -89,7 +89,7 @@ async function translate(word) {
         } catch (err) {
             console.log(err);
         }
-        i++;
+        // i++;
     };
     translations = newTranslationMap;
     // const valuesList = [];
