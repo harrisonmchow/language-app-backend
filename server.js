@@ -23,12 +23,20 @@ async function rotateWords(words, intervalMinutes, startingIndex) {
     await translate(selectedWord);
 
     /* Get the current time */
-    const currentTime = new Date();
-    /* Calculate the time remaining until the next interval-minute mark */
-    const minutesRemaining = intervalMinutes - (currentTime.getMinutes() % intervalMinutes);
-    /* Calculate milliseconds until the next interval-minute mark */
-    const millisecondsRemaining = (minutesRemaining * 60 * 1000) - (currentTime.getSeconds() * 1000) - currentTime.getMilliseconds();
+    const currentTimeUTC = new Date(); // Get the current UTC time
+    const midnightUTC = new Date(currentTimeUTC);
+    midnightUTC.setUTCHours(14, 0, 0, 0); // Set the time to midnight AEST time
 
+    /* Calculate the time remaining until the next interval-minute mark */
+    /* Calculate milliseconds until the next interval-minute mark */
+    // const minutesRemaining = intervalMinutes - (currentTime.getMinutes() % intervalMinutes);
+    // const millisecondsRemaining = (minutesRemaining * 60 * 1000) - (currentTime.getSeconds() * 1000) - currentTime.getMilliseconds();
+    var timeDifferenceMilliseconds = midnightUTC.getTime() - currentTimeUTC.getTime(); // Calculate the time difference in milliseconds
+    if (timeDifferenceMilliseconds < 0) {
+        midnightUTC.setDate(midnightUTC.getDate() + 1);
+        timeDifferenceMilliseconds = midnightUTC.getTime() - currentTimeUTC.getTime(); // Calculate the time difference in milliseconds
+    }
+    
     /* Start the interval */
     setTimeout(async () => {
         /* Increment index */
@@ -48,7 +56,7 @@ async function rotateWords(words, intervalMinutes, startingIndex) {
             // console.log(selectedWord);
 
         }, intervalMinutes * 60 * 1000);
-    }, millisecondsRemaining);
+    }, timeDifferenceMilliseconds);
 };
 
 /* Translate a single word into all supported languages and store in map */
